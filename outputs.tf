@@ -1,7 +1,3 @@
-output "sagemaker_hyper_parameter_tuning_jobs_id" {
-  description = "Map of id values across all sagemaker_hyper_parameter_tuning_jobs, keyed the same as var.sagemaker_hyper_parameter_tuning_jobs"
-  value       = { for k, v in aws_sagemaker_hyper_parameter_tuning_job.sagemaker_hyper_parameter_tuning_jobs : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "sagemaker_hyper_parameter_tuning_jobs_arn" {
   description = "Map of arn values across all sagemaker_hyper_parameter_tuning_jobs, keyed the same as var.sagemaker_hyper_parameter_tuning_jobs"
   value       = { for k, v in aws_sagemaker_hyper_parameter_tuning_job.sagemaker_hyper_parameter_tuning_jobs : k => v.arn if v.arn != null && length(v.arn) > 0 }
